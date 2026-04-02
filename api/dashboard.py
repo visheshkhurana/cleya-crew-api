@@ -202,6 +202,13 @@ DASHBOARD_HTML = """
                 <div class="dot" id="storeDot"></div>
                 <span id="storeStatus">Store: —</span>
             </div>
+            <div class="status-item" id="setupBanner" style="display:none; margin-left:auto;">
+                <a href="https://render.com/deploy?repo=https://github.com/visheshkhurana/cleya-crew-api" 
+                   target="_blank" 
+                   style="color:#60a5fa; text-decoration:none; font-size:0.85rem;">
+                   → Deploy backend on Render (free)
+                </a>
+            </div>
         </div>
 
         <div class="agents-grid">
@@ -270,11 +277,13 @@ DASHBOARD_HTML = """
                     apiStatus.textContent = 'Crew API: Online';
                     storeDot.className = 'dot green';
                     storeStatus.textContent = 'Store: ' + (data.crew_api.store || 'memory');
+                    document.getElementById('setupBanner').style.display = 'none';
                 } else {
-                    apiDot.className = 'dot red';
-                    apiStatus.textContent = 'Crew API: Offline';
-                    storeDot.className = 'dot red';
-                    storeStatus.textContent = 'Store: unavailable';
+                    apiDot.className = 'dot yellow';
+                    apiStatus.textContent = 'Crew API: Not connected';
+                    storeDot.className = 'dot yellow';
+                    storeStatus.textContent = 'Needs backend';
+                    document.getElementById('setupBanner').style.display = 'flex';
                 }
             } catch (e) {
                 document.getElementById('apiDot').className = 'dot red';

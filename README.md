@@ -1,6 +1,18 @@
 # Cleya.ai Marketing Crew — Production API
 
-Multi-agent growth & viral marketing system deployed on Vercel, integrated with Slack, HubSpot, Notion, Lemlist, Apify, and Resend.
+Multi-agent growth & viral marketing system integrated with Slack, HubSpot, Notion, Lemlist, Apify, and Resend.
+
+## One-Click Deploy
+
+### Backend API (Crew Engine)
+
+[![Deploy to Render](https://render.com/images/deploy-to-render-button.svg)](https://render.com/deploy?repo=https://github.com/visheshkhurana/cleya-crew-api)
+
+[![Deploy on Railway](https://railway.com/button.svg)](https://railway.com/template?referralCode=cleya&repo=https://github.com/visheshkhurana/cleya-crew-api)
+
+### Dashboard (already live)
+
+[cleya-crew-api.vercel.app](https://cleya-crew-api.vercel.app)
 
 ## API Endpoints
 
