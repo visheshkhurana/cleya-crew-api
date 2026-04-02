@@ -1,0 +1,195 @@
+# Cleya.ai Growth & Viral Marketing Crew — Task Definitions
+# Tasks flow sequentially: intelligence → strategy → content → community → PLG mechanics
+
+# ── TASK 1: Market Intelligence Brief ──────────────────────────────────
+ecosystem_intelligence_task:
+  description: >
+    Research and compile a real-time intelligence brief on the Indian startup ecosystem 
+    for {time_period}. Cover:
+    
+    1. **Funding Landscape**: Top 10 funding rounds this period, sector trends (fintech, 
+       healthtech, SaaS, AI/ML), stage-wise activity (pre-seed through Series B).
+    2. **Competitor Analysis**: Monitor platforms competing for professional networking 
+       attention — LinkedIn, Lunchclub, Topmate, Peerlist, LetsVenture, AngelList India, 
+       Instahyre, Cutshort, The Hub (by Signal). Track their feature releases, content 
+       strategies, and community moves.
+    3. **Trending Conversations**: What are Indian founders, VCs, and operators talking 
+       about on Twitter/X and LinkedIn? Identify 5 trending narratives we can ride.
+    4. **Pain Points & Opportunities**: What are professionals struggling with right now 
+       — founders (fundraising slowdown? hiring?), engineers (layoffs? career pivots?), 
+       marketers (budget cuts? upskilling?), recruiters (talent shortage? ghosting?) — 
+       that Cleya.ai can address with targeted messaging for each persona?
+    5. **Geographic Signals**: Any emerging startup activity in Tier-2 cities 
+       (Jaipur, Kochi, Ahmedabad, Pune) that Cleya should target?
+
+    Focus on {target_segment} specifically.
+  expected_output: >
+    A structured Markdown intelligence brief with:
+    - Executive summary (5 bullet points)
+    - Funding heatmap by sector and stage
+    - Competitor movement tracker (table format)
+    - Top 5 trending narratives with engagement data
+    - 3 pain-point-based marketing angles for Cleya.ai
+    - Tier-2 city opportunity assessment
+    - Recommended actions for the marketing crew
+  agent: market_intelligence_analyst
+
+# ── TASK 2: Growth Strategy & Funnel Design ────────────────────────────
+growth_strategy_task:
+  description: >
+    Using the ecosystem intelligence brief, design a comprehensive growth strategy 
+    for Cleya.ai targeting {target_segment} for {time_period}. Build:
+
+    1. **Acquisition Funnel**: Map the complete journey — awareness → waitlist signup → 
+       onboarding → first match → active member → referrer. Define conversion rate 
+       targets for each stage based on Indian B2B benchmarks.
+    2. **Channel Strategy**: Rank and detail the top 5 acquisition channels for 
+       {target_segment} in India. For each: expected CAC, volume potential, and 
+       timeline to results. Consider: LinkedIn organic, Twitter/X, WhatsApp groups, 
+       professional events (BTS, TechSparks, SaaSBOOMi, HasGeek, GDG DevFests), 
+       hiring platform partnerships, accelerator partnerships, professional 
+       communities (engineering, design, marketing), cold outreach (last resort).
+    3. **Growth Loops**: Design 3 self-reinforcing growth loops. Example: 
+       "Founder gets matched → shares match card on LinkedIn → match card has 
+       Cleya CTA → new founder signs up → gets matched → shares..."
+    4. **Activation & Retention**: Define the "aha moment" for each persona 
+       (founder: first quality match; investor: first deal-flow hit; engineer: 
+       first intro to a hiring startup; designer: first project lead; marketer: 
+       first collaboration match; recruiter: first candidate pipeline hit). 
+       Design the first-7-day activation sequence for each persona.
+    5. **Metrics Framework**: Define the North Star Metric and 5 supporting KPIs 
+       with weekly targets.
+
+    The strategy must be executable with a lean team (2-3 people) and minimal paid spend.
+  expected_output: >
+    A detailed growth strategy document in Markdown with:
+    - Full acquisition funnel with conversion benchmarks
+    - Channel strategy ranked by ROI (table format)
+    - 3 growth loop diagrams (described step-by-step)
+    - 7-day activation playbook for each persona
+    - Metrics dashboard spec with targets
+    - 4-week sprint plan with weekly milestones
+    - Budget allocation (assuming ₹2L/month marketing budget)
+  agent: growth_strategist
+
+# ── TASK 3: Viral Content Calendar & Assets ────────────────────────────
+viral_content_task:
+  description: >
+    Using the growth strategy and intelligence brief, create a viral content 
+    engine for Cleya.ai targeting {target_segment}. Build:
+
+    1. **Content Pillars** (4 pillars): Define the recurring themes that position 
+       Cleya.ai as the default professional networking tool. Examples: "The Cold Outreach 
+       is Dead" narrative, "How I Found My Next Role/Co-founder/Hire" stories, "Building 
+       in Public" journeys, "Career Matchmaking" data stories, "Ecosystem Intelligence" 
+       hot takes. Content must resonate with ALL professionals, not just founders.
+    2. **2-Week Content Calendar**: For LinkedIn AND Twitter/X. Each post should have:
+       - Hook (first line that stops the scroll)
+       - Full post copy (ready to publish)
+       - Visual/format suggestion (carousel, thread, single image, poll)
+       - Expected engagement driver (controversy, data, FOMO, social proof)
+       - CTA (soft or hard, linked to Cleya.ai waitlist)
+    3. **Viral Mechanics**: For each piece of content, explain why it should spread. 
+       Use frameworks: Social Currency (makes sharer look smart), Triggers (ties to 
+       daily founder life), Emotion (awe, anxiety, humor), Public (visible behavior), 
+       Practical Value (useful), Stories (narrative arc).
+    4. **Professional Stories Content**: Draft 3 "building in public" posts from the 
+       founder's perspective AND 3 member spotlight stories (one engineer, one marketer, 
+       one recruiter) showing how Cleya.ai transformed their professional networking.
+    5. **Meme & Hook Bank**: Create 10 scroll-stopping hooks and 5 meme concepts 
+       relevant to Indian startup culture.
+
+    Tone: Punchy, insider, slightly irreverent. Never corporate. Write like a professional 
+    who's been in the trenches, not a marketing agency. Alternate between founder voice, 
+    engineer voice, and operator voice to cover all audiences.
+  expected_output: >
+    A complete content package in Markdown:
+    - 4 content pillars with rationale
+    - 14-day content calendar (table: day, platform, format, hook, full copy, CTA)
+    - Viral mechanics breakdown for each post
+    - 3 founder "building in public" posts + 3 member spotlight posts (ready to publish)
+    - 10 hooks + 5 meme concepts
+    - Content performance tracking template
+  agent: viral_content_architect
+
+# ── TASK 4: Community Partnerships & Ambassador Program ────────────────
+community_partnerships_task:
+  description: >
+    Using the growth strategy, design a community-led growth program for Cleya.ai 
+    in the Indian startup ecosystem. Build:
+
+    1. **Partnership Hit List**: Identify 20 specific organizations, communities, and 
+       platforms to partner with. For each: contact approach, value proposition for them, 
+       what Cleya gets, and integration mechanics. Categories:
+       - Accelerators/Incubators (T-Hub, NSRCEL, Venture Highway, Y Combinator India alumni)
+       - VC firms (for deal-flow partnerships)
+       - Founder communities (SaaSBOOMi, IndiaOS, Headstart, ProductGeeks)
+       - Engineering communities (GDG India, HasGeek, freeCodeCamp India)
+       - Design communities (Dribbble India, Figma India, UXDX)
+       - Hiring platforms (Instahyre, Cutshort, Peerlist, Topmate)
+       - WhatsApp/Telegram groups (Indian Startup Founders, VC Chai, engineering groups)
+       - Events (TechSparks, BTS, SaaSBOOMi Annual, GDG DevFest, Figma Config)
+       - Media (Inc42, YourStory, The Ken)
+    2. **City Champions Program**: Design a program to recruit 1 ambassador per city 
+       in 10 Indian startup hubs. Define: selection criteria, incentives, responsibilities, 
+       onboarding kit, and monthly engagement cadence.
+    3. **Co-Marketing Playbook**: Create 3 ready-to-execute co-marketing campaign 
+       templates (webinar series, data report co-publish, referral swap).
+    4. **Event Strategy**: Plan Cleya.ai's presence at 5 upcoming Indian startup events. 
+       For each: booth/session format, lead capture mechanics, and follow-up sequence.
+    5. **WhatsApp Viral Strategy**: Design a WhatsApp-native referral flow (since 
+       WhatsApp is the #1 professional communication tool in Indian startups).
+  expected_output: >
+    A partnership and community growth playbook in Markdown:
+    - 20 partner profiles with outreach templates (table format)
+    - City Champions program design doc
+    - 3 co-marketing campaign briefs
+    - Event presence plans for 5 events
+    - WhatsApp referral flow (step-by-step)
+    - Partnership tracker template
+    - 30-60-90 day community growth targets
+  agent: community_growth_hacker
+
+# ── TASK 5: Product-Led Growth & Referral System Design ────────────────
+product_led_growth_task:
+  description: >
+    Using all previous outputs, design the product-led growth mechanics that will 
+    make Cleya.ai inherently viral. Build:
+
+    1. **Referral System V1**: Design the complete referral program.
+       - Referral trigger points (after first match, after successful intro, weekly digest)
+       - Incentive structure (priority matching, early access to features, "Super Connector" 
+         badge, invite credits, professional profile boost — avoid monetary rewards initially)
+       - Persona-specific referral hooks (founders invite investors, engineers invite 
+         engineering managers, recruiters invite hiring founders, etc.)
+       - Referral UX flow (3 screens: invite → track → reward)
+       - WhatsApp share templates (pre-written, personalized)
+       - Viral coefficient modeling (target: k > 1.0)
+    2. **Shareable Match Cards**: Design the concept for shareable assets that members 
+       get after each match. Like Spotify Wrapped but for networking. "I was matched 
+       with a Series A investor in 48 hours on @joincleya" — social proof that drives 
+       curiosity.
+    3. **Waitlist Gamification**: Design a waitlist that builds FOMO and drives referrals.
+       - Position on waitlist + "jump ahead by inviting" mechanics
+       - Weekly "insider" emails to waitlist (ecosystem stats, sneak peeks)
+       - Tiered access: more referrals = earlier access + better onboarding
+    4. **In-Product Virality Hooks**:
+       - "Your match is waiting" notification → share to unlock
+       - Ecosystem leaderboard (most connected founders this month)
+       - Match success stories (anonymized) shared as social proof
+       - "X founders in your city just joined" FOMO triggers
+    5. **Viral Coefficient Calculator**: Provide the formula and inputs needed to 
+       track k-factor weekly. Recommend targets for Month 1, 2, 3.
+
+    All designs should account for Indian user behavior: WhatsApp-first sharing, 
+    status-consciousness, community trust signals, and mobile-first UX.
+  expected_output: >
+    A product-led growth specification document in Markdown:
+    - Referral system PRD (complete with UX flow descriptions)
+    - Shareable match card concept + copy variations (5 templates)
+    - Waitlist gamification system design
+    - 8 in-product virality hooks with implementation priority (P0/P1/P2)
+    - Viral coefficient model with 3-month targets
+    - Implementation roadmap (what to build in sprint 1, 2, 3)
+    - A/B testing plan for referral incentives
+  agent: product_led_growth_engineer
