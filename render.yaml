@@ -1,0 +1,33 @@
+# Render Blueprint — auto-deploys from GitHub
+# Deploy link: https://render.com/deploy?repo=https://github.com/visheshkhurana/cleya-crew-api
+
+services:
+  - type: web
+    name: cleya-crew-api
+    runtime: docker
+    dockerfilePath: ./Dockerfile
+    plan: free
+    healthCheckPath: /api/health
+    envVars:
+      - key: OPENAI_API_KEY
+        sync: false  # User must set manually
+      - key: SERPER_API_KEY
+        sync: false
+      - key: SLACK_BOT_TOKEN
+        sync: false
+      - key: HUBSPOT_API_KEY
+        sync: false
+      - key: NOTION_API_KEY
+        sync: false
+      - key: NOTION_PARENT_PAGE_ID
+        sync: false
+      - key: LEMLIST_API_KEY
+        sync: false
+      - key: APIFY_API_TOKEN
+        sync: false
+      - key: RESEND_API_KEY
+        sync: false
+      - key: RESEND_FROM_EMAIL
+        value: crew@cleya.ai
+      - key: PORT
+        value: "8000"
