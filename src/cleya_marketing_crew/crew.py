@@ -6,11 +6,16 @@ Production crew with real tool integrations.
 5 agents → Sequential pipeline → Results to Slack + Notion
 """
 
-from crewai import Agent, Crew, Process, Task
+import os
+from crewai import Agent, Crew, Process, Task, LLM
 from crewai.project import CrewBase, agent, crew, task
 from crewai_tools import SerperDevTool, ScrapeWebsiteTool, FileReadTool
 from crewai.agents.agent_builder.base_agent import BaseAgent
 from typing import List
+
+# ── LLM Config (explicit model to avoid crewAI default issues) ──────
+DEFAULT_MODEL = os.getenv("CREW_MODEL", "gpt-4o-mini")
+default_llm = LLM(model=DEFAULT_MODEL)
 
 from cleya_marketing_crew.tools.integrations import (
     SlackPostTool,
@@ -50,6 +55,7 @@ class CleyaMarketingCrew:
         return Agent(
             config=self.agents_config["market_intelligence_analyst"],
             tools=[serper_search, web_scraper, apify, slack, file_reader],
+            llm=default_llm,
             verbose=True,
         )
 
@@ -59,6 +65,7 @@ class CleyaMarketingCrew:
         return Agent(
             config=self.agents_config["growth_strategist"],
             tools=[serper_search, notion, slack, file_reader],
+            llm=default_llm,
             verbose=True,
             allow_delegation=True,
         )
@@ -69,6 +76,7 @@ class CleyaMarketingCrew:
         return Agent(
             config=self.agents_config["viral_content_architect"],
             tools=[serper_search, web_scraper, notion, slack],
+            llm=default_llm,
             verbose=True,
         )
 
@@ -78,6 +86,7 @@ class CleyaMarketingCrew:
         return Agent(
             config=self.agents_config["community_growth_hacker"],
             tools=[serper_search, web_scraper, hubspot, lemlist, notion, resend],
+            llm=default_llm,
             verbose=True,
         )
 
@@ -87,6 +96,7 @@ class CleyaMarketingCrew:
         return Agent(
             config=self.agents_config["product_led_growth_engineer"],
             tools=[notion, slack, file_reader],
+            llm=default_llm,
             verbose=True,
         )
 
