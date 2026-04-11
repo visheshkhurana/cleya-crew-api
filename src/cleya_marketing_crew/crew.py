@@ -17,6 +17,12 @@ from typing import List
 DEFAULT_MODEL = os.getenv("CREW_MODEL", "gpt-4o-mini")
 default_llm = LLM(model=DEFAULT_MODEL)
 
+# ── Embeddings Config (for crew memory) ──────────────────────────────
+EMBEDDER_CONFIG = {
+    "provider": "openai",
+    "config": {"model": "text-embedding-3-small"},
+}
+
 from cleya_marketing_crew.tools.integrations import (
     SlackPostTool,
     HubSpotCreateContactTool,
@@ -133,4 +139,5 @@ class CleyaMarketingCrew:
             process=Process.sequential,
             verbose=True,
             memory=True,
+            embedder=EMBEDDER_CONFIG,
         )
